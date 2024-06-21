@@ -78,11 +78,12 @@ Background-color: rgb(255, 255, 255)
 }
 .redes-sociais{
     display: flex;
-    list-style-type: none;
 }
-.img-insta, .img-x, .img-steam{
-    width: 50px;
-    height: 50px;
+.fa-brands{
+    font-size: 30px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
 .titulos {
     margin-left: 30px;
