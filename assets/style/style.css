@@ -1,0 +1,246 @@
+#div-logo {
+    padding: 20px 80px;
+}
+
+* {
+    font-family: Arial, sans-serif;
+    color: rgb(40, 48, 63);
+}
+
+body {
+    position: relative;
+    z-index: 1;
+    Background-color: rgb(255, 255, 255);
+    margin: 30px;
+    padding: 3px;
+    border-radius: 10%;
+    border-color: #353b3f;
+    background-color: #ffffff;
+}
+
+.menu {
+    background-color: rgb(255, 255, 255);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nome-principal {
+    background-color: rgb(219, 219, 219);
+    border: 10px solid rgb(219, 219, 219);
+    border-radius: 4px;
+    margin-left: 30px;
+}
+
+.menu-de-guia {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    width: 500;
+    background-color: rgb(255, 255, 255);
+    margin-right: 20px;
+}
+
+.texto {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+#texto-imagem {
+    justify-content: center;
+}
+
+.nome-colorido {
+    color: rgb(22, 157, 255);
+}
+
+.repositorios {
+    display: flex;
+    justify-content: center;
+}
+
+.img-canva,
+.img-git,
+.img-verde,
+.img-khan {
+    width: 300px;
+    margin-right: 60px;
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.amigos {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.rolla,
+.carv,
+.miguel,
+.vitor {
+    width: 100px;
+    margin-left: 10px;
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.imagem {
+    border: 5px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.link {
+    color: rgb(29, 35, 46);
+    text-decoration: none;
+}
+
+.redes-sociais {
+    display: flex;
+}
+
+.fa-brands {
+    font-size: 30px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.titulos {
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+hr {
+    border-top: 2px solid black;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 100px;
+}
+
+.perfil {
+    margin-left: 30px;
+}
+
+.carousel {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-content {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    flex: 1;
+    min-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-controls label {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #426969;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-controls label:hover {
+    background-color: #555;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#slide1:checked~.carousel-content {
+    transform: translateX(0);
+}
+
+#slide2:checked~.carousel-content {
+    transform: translateX(-100%);
+}
+
+#slide3:checked~.carousel-content {
+    transform: translateX(-200%);
+}
+
+.rodape {
+    background-color: rgb(219, 219, 219);
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.rodape-inf {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.rodape h3 {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+}
+
+.rodape p,
+.rodape li {
+    margin-bottom: 10px;
+}
+
+.rodape a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.rodape a:hover {
+    color: #ffffff;
+}
+
+.switch-mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-solid {
+    padding: 10px;
+    color: #292929;
+    font-size: 25px;
+    background-color: #e4e4e4;
+    border-radius: 50%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+}
