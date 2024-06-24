@@ -221,7 +221,9 @@ input[type="radio"] {
     color: #ffffff;
 }
 
-.switch-mode {
+/*-----------Modo de Exibição-----------*/
+
+/*.switch-mode {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,4 +245,4 @@ input[type="radio"] {
     height: auto;
     width: auto;
     cursor: pointer;
-}
+}*/
