@@ -74,5 +74,39 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } // fim da passagem de informações do nav
 
+    const fotosdocarrossel = document.querySelector('#carousel-content'); // passagem de informações do Carrossel
+    if (!fotosdocarrossel) {
+        console.error('Elemento #carousel-content não encontrado no DOM.');
+    } else {
+        getcarrosseljson();
+    }
+    function getcarrosseljson() {
+        fetch('')
+            .then(async res => {
+                if (!res.ok) {
+                    throw new Error(res.status);
+                }
+
+                let data = await res.json();
+                let project = document.createElement('div');
+
+                project.innerHTML = `
+                    <div class="carousel-item">
+                        <img src="${}">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="${}">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="${}">
+                    </div>
+                `;
+
+                nome.appendChild(project);
+            })
+            .catch(error => {
+                console.error('Erro ao buscar dados do Json:', error);
+            });
+    } // fim da passagem de informações do Carrossel
 
 });
