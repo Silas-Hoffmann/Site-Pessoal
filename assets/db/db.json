@@ -24,5 +24,23 @@
         "imageURL": "#",
         "URLGitHub": "https://github.com/vitorcostao"
       }
+    ],
+
+    "sugeridos": [
+      {
+        "id": "1846381",
+        "name": "Certificado Dom Helder",
+        "SugeridoURL": "https://lh3.google.com/u/0/d/19VydLb8V8p2n7qvii8oAXPFzGsq0EYrJ=w891-h929-iv1"
+      },
+      {
+        "id": "1846382",
+        "name": "Certificado Roboter",
+        "SugeridoURL": "https://lh3.google.com/u/0/d/1P-d_zIGCkvdkt-A2AjD4sOa_DKkwNqTO=w891-h929-iv1"
+      },
+      {
+        "id": "1846383",
+        "name": "Certificado Excel",
+        "SugeridoURL": "https://lh3.google.com/u/0/d/16uYBEvq2cntKIea2Twa3X_9GaBp3liiT=w1920-h945-iv1"
+      }
     ]
   }
