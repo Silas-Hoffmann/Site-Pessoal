@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     const perfil = document.querySelector('#clonagem-perfil'); // passagem de informações do perfil
     if (!perfil) {
         console.error('Elemento #clonagem-perfil não encontrado no DOM.');
-        return;
+    } else {
+        getApiGitHubPerfil();
     }
-    function getApiGitHub() {
+    function getApiGitHubPerfil() {
         fetch('https://api.github.com/users/Silas-Hoffmann')
             .then(async res => {
                 if (!res.ok) {
@@ -43,16 +45,15 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => {
                 console.error('Erro ao buscar dados do GitHub:', error);
             });
-    }
-    // fim da passagem de informações do perfil
+    } // fim da passagem de informações do perfil
 
-    
     const nome = document.querySelector('#nome-nav'); // passagem de informações do nav
     if (!nome) {
-        console.error('Elemento #clonagem-perfil não encontrado no DOM.');
-        return;
+        console.error('Elemento #nome-nav não encontrado no DOM.');
+    } else {
+        getApiGitHubNav();
     }
-    function getApiGitHub() {
+    function getApiGitHubNav() {
         fetch('https://api.github.com/users/Silas-Hoffmann')
             .then(async res => {
                 if (!res.ok) {
@@ -63,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let project = document.createElement('div');
 
                 project.innerHTML = `
-                
+                    <p>${data.name}</p>
                 `;
 
                 nome.appendChild(project);
@@ -71,13 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(error => {
                 console.error('Erro ao buscar dados do GitHub:', error);
             });
-    }
-    // fim da passagem de informações do nav
+    } // fim da passagem de informações do nav
 
 
-
-
-
-
-    getApiGitHub();
 });
