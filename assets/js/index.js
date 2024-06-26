@@ -1,11 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const perfil = document.querySelector('#clonagem-perfil');
-
+    const perfil = document.querySelector('#clonagem-perfil'); // passagem de informações do perfil
     if (!perfil) {
         console.error('Elemento #clonagem-perfil não encontrado no DOM.');
         return;
     }
-
     function getApiGitHub() {
         fetch('https://api.github.com/users/Silas-Hoffmann')
             .then(async res => {
@@ -46,6 +44,40 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error('Erro ao buscar dados do GitHub:', error);
             });
     }
+    // fim da passagem de informações do perfil
+
+    
+    const nome = document.querySelector('#nome-nav'); // passagem de informações do nav
+    if (!nome) {
+        console.error('Elemento #clonagem-perfil não encontrado no DOM.');
+        return;
+    }
+    function getApiGitHub() {
+        fetch('https://api.github.com/users/Silas-Hoffmann')
+            .then(async res => {
+                if (!res.ok) {
+                    throw new Error(res.status);
+                }
+
+                let data = await res.json();
+                let project = document.createElement('div');
+
+                project.innerHTML = `
+                
+                `;
+
+                nome.appendChild(project);
+            })
+            .catch(error => {
+                console.error('Erro ao buscar dados do GitHub:', error);
+            });
+    }
+    // fim da passagem de informações do nav
+
+
+
+
+
 
     getApiGitHub();
 });
