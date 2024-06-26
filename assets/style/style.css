@@ -59,10 +59,8 @@ body {
     justify-content: center;
 }
 
-.img-canva,
-.img-git,
-.img-verde,
-.img-khan {
+.img-repo1 {
+    display: flex;
     width: 300px;
     margin-right: 60px;
     border: 5px solid #ffffff;

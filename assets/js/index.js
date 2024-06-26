@@ -76,8 +76,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+    const repos = document.querySelector('#repositorios'); // passagem de informações dos repositórios
+    if (!repos) {
+        console.error('Elemento #repositorios não encontrado no DOM.');
+    } else {
+        getApiGitHubrepos();
+    }
+    function getApiGitHubrepos() {
+        fetch('https://api.github.com/users/Silas-Hoffmann/repos')
+            .then(async res => {
+                if (!res.ok) {
+                    throw new Error(res.status);
+                }
 
+                let data = await res.json();
+                let project = document.createElement('div');
+
+                project.innerHTML = `
+                    <div class="col">
+                        <div class="card">
+                            <a href="index2.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
+                            <div class="card-body">
+                                <h5 class="card-title">${data[0].name}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <a href="index2.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
+                            <div class="card-body">
+                                <h5 class="card-title">${data[1].name}</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <a href="index2.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
+                            <div class="card-body">
+                                <h5 class="card-title">${data[2].name}</h5>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                repos.appendChild(project);
+            })
+            .catch(error => {
+                console.error('Erro ao buscar dados do GitHub:', error);
+            });
+    } // fim da passagem de informações dos repositórios
 
 
 
 });
+
+/*<div class="col">
+<div class="card">
+<a href="index2.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
+<div class="card-body">
+  <h5 href="${data[0].html_url}" class="card-title">${data[0].full_name}</h5>
+</div>
+</div>
+</div>*/
