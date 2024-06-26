@@ -74,8 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } // fim da passagem de informações do nav
 
-
-
     const repos = document.querySelector('#repositorios'); // passagem de informações dos repositórios
     if (!repos) {
         console.error('Elemento #repositorios não encontrado no DOM.');
@@ -103,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                     <div class="col">
                         <div class="card">
-                            <a href="index2.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
+                            <a href="index3.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
                             <div class="card-body">
                                 <h5 class="card-title">${data[1].name}</h5>
                             </div>
@@ -111,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                     <div class="col">
                         <div class="card">
-                            <a href="index2.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
+                            <a href="index4.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
                             <div class="card-body">
                                 <h5 class="card-title">${data[2].name}</h5>
                             </div>
@@ -126,15 +124,4 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } // fim da passagem de informações dos repositórios
 
-
-
 });
-
-/*<div class="col">
-<div class="card">
-<a href="index2.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
-<div class="card-body">
-  <h5 href="${data[0].html_url}" class="card-title">${data[0].full_name}</h5>
-</div>
-</div>
-</div>*/
