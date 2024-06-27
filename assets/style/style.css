@@ -163,7 +163,8 @@ hr {
 ----------------------------------------*/
 .carousel-container {
     position: relative;
-    width: 80%;
+    width: 40%;
+    height: 40%;
     margin: auto;
     overflow: hidden;
 }
@@ -172,11 +173,11 @@ hr {
     transition: transform 0.5s ease-in-out;
 }
 .carousel-item {
-    min-width: 100%;
+    width: 100%;
     box-sizing: border-box;
     text-align: center;
     font-size: 24px;
-    padding: 100px 0;
+    padding: 0;
     background-color: #eee;
     border: 1px solid #ccc;
 }
@@ -196,4 +197,8 @@ hr {
 }
 .carousel-button.next {
     right: 10px;
+}
+.ajustar-imagem {
+    padding-top: 0%;
+    width: 490px;
 }

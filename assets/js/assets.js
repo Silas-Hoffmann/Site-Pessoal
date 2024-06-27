@@ -266,9 +266,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //------------------------------------------------------
     //------------Conteúdos Sugeridos(Carrossel)------------
     //------------------------------------------------------
-    //${data.sugeridos[0].imageURL}
-
-
     const contentsuger1 = document.querySelector('.img-sugeridos-1');
         if (!contentsuger1) {
             console.error('Elemento .img-sugeridos-1 não encontrado no DOM.');
@@ -286,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let project = document.createElement('div');
     
                 project.innerHTML = `
-                    <img src="${data.sugeridos[0].imageURL}" alt="Descrição da imagem">
+                    <img src="${data.sugeridos[0].imageURL}" alt="Descrição da imagem" class="ajustar-imagem">
           `;
           contentsuger1.appendChild(project);
             })
@@ -312,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let project = document.createElement('div');
     
                 project.innerHTML = `
-                    <img src="${data.sugeridos[1].imageURL}" alt="Descrição da imagem">
+                    <img src="${data.sugeridos[1].imageURL}" alt="Descrição da imagem" class="ajustar-imagem">
           `;
           contentsuger2.appendChild(project);
             })
@@ -338,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let project = document.createElement('div');
     
                 project.innerHTML = `
-                    <img src="${data.sugeridos[2].imageURL}" alt="Descrição da imagem">
+                    <img src="${data.sugeridos[2].imageURL}" alt="Descrição da imagem" class="ajustar-imagem">
           `;
           contentsuger3.appendChild(project);
             })
