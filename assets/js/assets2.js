@@ -59,7 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="texto">
                         <p><h4>Descrição</h4><br>${data[0].description}</p>
                         <p><h4>Data de Criação</h4><br>${date}</p>
-                        <p><h4>Linguagens</h4><br>${data[0].language}</p>
+                        <p><h4>Linguagem principal</h4><br>${data[0].language}</p>
+                        <p><h4>Link para o repositório</h4><br>${data[0].html_url}</p>
                     </div>
                 </section>
             `;
