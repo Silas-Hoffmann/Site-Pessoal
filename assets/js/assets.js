@@ -74,7 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } // fim da passagem de informações do nav
 
-    const repos = document.querySelector('#repositorios'); // passagem de informações dos repositórios
+
+
+    const repos = document.querySelector('.card-body1'); // passagem de informações dos repositórios
     if (!repos) {
         console.error('Elemento #repositorios não encontrado no DOM.');
     } else {
@@ -91,33 +93,61 @@ document.addEventListener("DOMContentLoaded", function () {
                 let project = document.createElement('div');
 
                 project.innerHTML = `
-                    <div class="col">
-                        <div class="card">
-                            <a href="index2.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
-                            <div class="card-body">
-                                <h5 class="card-title">${data[0].name}</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <a href="index3.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
-                            <div class="card-body">
-                                <h5 class="card-title">${data[1].name}</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <a href="index4.html"><img src="#" alt="imagem" class="img-repo1"></a><!--imagem-->
-                            <div class="card-body">
-                                <h5 class="card-title">${data[2].name}</h5>
-                            </div>
-                        </div>
-                    </div>
-                `;
+                    <h5 class="card-title">${data[0].name}</h5>`;
 
                 repos.appendChild(project);
+            })
+            .catch(error => {
+                console.error('Erro ao buscar dados do GitHub:', error);
+            });
+    } // fim da passagem de informações dos repositórios
+
+    const repos2 = document.querySelector('.card-body2'); // passagem de informações dos repositórios
+    if (!repos2) {
+        console.error('Elemento #repositorios não encontrado no DOM.');
+    } else {
+        getApiGitHubrepos2();
+    }
+    function getApiGitHubrepos2() {
+        fetch('https://api.github.com/users/Silas-Hoffmann/repos')
+            .then(async res => {
+                if (!res.ok) {
+                    throw new Error(res.status);
+                }
+
+                let data = await res.json();
+                let project = document.createElement('div');
+
+                project.innerHTML = `
+                    <h5 class="card-title">${data[1].name}</h5>`;
+
+                repos2.appendChild(project);
+            })
+            .catch(error => {
+                console.error('Erro ao buscar dados do GitHub:', error);
+            });
+    } // fim da passagem de informações dos repositórios
+
+    const repos3 = document.querySelector('.card-body3'); // passagem de informações dos repositórios
+    if (!repos3) {
+        console.error('Elemento #repositorios não encontrado no DOM.');
+    } else {
+        getApiGitHubrepos3();
+    }
+    function getApiGitHubrepos3() {
+        fetch('https://api.github.com/users/Silas-Hoffmann/repos')
+            .then(async res => {
+                if (!res.ok) {
+                    throw new Error(res.status);
+                }
+
+                let data = await res.json();
+                let project = document.createElement('div');
+
+                project.innerHTML = `
+                    <h5 class="card-title">${data[2].name}</h5>`;
+
+                repos3.appendChild(project);
             })
             .catch(error => {
                 console.error('Erro ao buscar dados do GitHub:', error);
