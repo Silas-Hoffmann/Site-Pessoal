@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const perfil = document.querySelector('#clonagem-perfil'); // passagem de informações do perfil
+    const perfil = document.querySelector('#clonagem-perfil');
     if (!perfil) {
         console.error('Elemento #clonagem-perfil não encontrado no DOM.');
     } else {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } // fim da passagem de informações do perfil
 
-    const nome = document.querySelector('#nome-nav'); // passagem de informações do nav
+    const nome = document.querySelector('#nome-nav');
     if (!nome) {
         console.error('Elemento #nome-nav não encontrado no DOM.');
     } else {
@@ -74,9 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } // fim da passagem de informações do nav
 
-
-
-    const repos = document.querySelector('.card-body1'); // passagem de informações dos repositórios
+//------------------------------------------------------
+//---------------------Repositórios---------------------
+//------------------------------------------------------
+    const repos = document.querySelector('.card-body1');
     if (!repos) {
         console.error('Elemento #repositorios não encontrado no DOM.');
     } else {
@@ -102,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } // fim da passagem de informações dos repositórios
 
-    const repos2 = document.querySelector('.card-body2'); // passagem de informações dos repositórios
+    const repos2 = document.querySelector('.card-body2');
     if (!repos2) {
         console.error('Elemento #repositorios não encontrado no DOM.');
     } else {
@@ -128,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } // fim da passagem de informações dos repositórios
 
-    const repos3 = document.querySelector('.card-body3'); // passagem de informações dos repositórios
+    const repos3 = document.querySelector('.card-body3');
     if (!repos3) {
         console.error('Elemento #repositorios não encontrado no DOM.');
     } else {
@@ -154,4 +155,196 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     } // fim da passagem de informações dos repositórios
 
+
+//------------------------------------------------------
+//------------------------Colegas-----------------------
+//------------------------------------------------------
+const amig1 = document.querySelector('#amigos');
+    if (!amig1) {
+        console.error('Elemento #amigos não encontrado no DOM.');
+    } else {
+        getJsonInfoFriends1();
+    }
+function getJsonInfoFriends1() {
+    fetch('assets/js/db/db.json')
+        .then(async res => {
+            if (!res.ok) {
+                throw new Error(res.status);
+            }
+
+            let data = await res.json();
+            let project = document.createElement('div');
+
+            project.innerHTML = `
+                <p><a href="${data.friends[0].URLGitHub}"><img src="${data.friends[0].imageURL}" alt="Arthur Carvalho" class="carv"></p>
+      `;
+      amig1.appendChild(project);
+        })
+        .catch(error => {
+            console.error('Erro ao buscar dados do Json:', error);
+        });
+}
+
+const amig2 = document.querySelector('#amigos');
+    if (!amig2) {
+        console.error('Elemento #amigos não encontrado no DOM.');
+    } else {
+        getJsonInfoFriends2();
+    }
+function getJsonInfoFriends2() {
+    fetch('assets/js/db/db.json')
+        .then(async res => {
+            if (!res.ok) {
+                throw new Error(res.status);
+            }
+
+            let data = await res.json();
+            let project = document.createElement('div');
+
+            project.innerHTML = `
+                <p><a href="${data.friends[1].URLGitHub}"><img src="${data.friends[1].imageURL}" alt="Arthur Soares" class="rolla"></p>
+      `;
+      amig2.appendChild(project);
+        })
+        .catch(error => {
+            console.error('Erro ao buscar dados do Json:', error);
+        });
+}
+
+const amig3 = document.querySelector('#amigos');
+    if (!amig3) {
+        console.error('Elemento #amigos não encontrado no DOM.');
+    } else {
+        getJsonInfoFriends3();
+    }
+function getJsonInfoFriends3() {
+    fetch('assets/js/db/db.json')
+        .then(async res => {
+            if (!res.ok) {
+                throw new Error(res.status);
+            }
+
+            let data = await res.json();
+            let project = document.createElement('div');
+
+            project.innerHTML = `
+                <p><a href="${data.friends[2].URLGitHub}"><img src="${data.friends[2].imageURL}" alt="Miguel" class="miguel"></p>
+      `;
+      amig3.appendChild(project);
+        })
+        .catch(error => {
+            console.error('Erro ao buscar dados do Json:', error);
+        });
+}
+
+const amig4 = document.querySelector('#amigos');
+    if (!amig4) {
+        console.error('Elemento #amigos não encontrado no DOM.');
+    } else {
+        getJsonInfoFriends4();
+    }
+function getJsonInfoFriends4() {
+    fetch('assets/js/db/db.json')
+        .then(async res => {
+            if (!res.ok) {
+                throw new Error(res.status);
+            }
+
+            let data = await res.json();
+            let project = document.createElement('div');
+
+            project.innerHTML = `
+                <p><a href="${data.friends[3].URLGitHub}"><img src="${data.friends[3].imageURL}" alt="Vitor" class="vitor"></a></p>
+      `;
+      amig4.appendChild(project);
+        })
+        .catch(error => {
+            console.error('Erro ao buscar dados do Json:', error);
+        });
+}
+
+//------------------------------------------------------
+//------------Conteúdos Sugeridos(Carrossel)------------
+//------------------------------------------------------
+
+const contentsuger1 = document.querySelector('.carousel-item1');
+    if (!contentsuger1) {
+        console.error('Elemento #carousel-content não encontrado no DOM.');
+    } else {
+        getJsonInfoSuger1();
+    }
+function getJsonInfoSuger1() {
+    fetch('assets/js/db/db.json')
+        .then(async res => {
+            if (!res.ok) {
+                throw new Error(res.status);
+            }
+
+            let data = await res.json();
+            let project = document.createElement('div');
+
+            project.innerHTML = `
+                <div class="carousel-item"><img src="${data.sugeridos[0].imageURL}"></div>
+      `;
+      contentsuger1.appendChild(project);
+        })
+        .catch(error => {
+            console.error('Erro ao buscar dados do Json:', error);
+        });
+}
+
+const contentsuger2 = document.querySelector('.carousel-item2');
+    if (!contentsuger2) {
+        console.error('Elemento #carousel-content não encontrado no DOM.');
+    } else {
+        getJsonInfoSuger2();
+    }
+function getJsonInfoSuger2() {
+    fetch('assets/js/db/db.json')
+        .then(async res => {
+            if (!res.ok) {
+                throw new Error(res.status);
+            }
+
+            let data = await res.json();
+            let project = document.createElement('div');
+
+            project.innerHTML = `
+                <div class="carousel-item"><img src="${data.sugeridos[1].imageURL}"></div>
+      `;
+      contentsuger2.appendChild(project);
+        })
+        .catch(error => {
+            console.error('Erro ao buscar dados do Json:', error);
+        });
+}
+
+const contentsuger3 = document.querySelector('.carousel-item3');
+    if (!contentsuger3) {
+        console.error('Elemento #carousel-content não encontrado no DOM.');
+    } else {
+        getJsonInfoSuger3();
+    }
+function getJsonInfoSuger3() {
+    fetch('assets/js/db/db.json')
+        .then(async res => {
+            if (!res.ok) {
+                throw new Error(res.status);
+            }
+
+            let data = await res.json();
+            let project = document.createElement('div');
+
+            project.innerHTML = `
+                <div class="carousel-item"><img src="${data.sugeridos[2].imageURL}"></div>
+      `;
+      contentsuger3.appendChild(project);
+        })
+        .catch(error => {
+            console.error('Erro ao buscar dados do Json:', error);
+        });
+}
+
 });
+
+//<div class="carousel-item"><img src="#"></div>
