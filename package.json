@@ -1,0 +1,25 @@
+{
+  "name": "site-pessoal",
+  "version": "1.0.0",
+  "description": "Esse e o prototipo do meu site pessoal, desenvolvido no primeiro semestre da facudade de Ciencia da Computacao na PUC e continuado independente no segundo semestre",
+  "main": "index.js",
+  "scripts": {
+    "test": "js test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silas-Hoffmann/Site-Pessoal.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "json"
+  ],
+  "author": "Silas Hoffmann Reis Viana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Silas-Hoffmann/Site-Pessoal/issues"
+  },
+  "homepage": "https://github.com/Silas-Hoffmann/Site-Pessoal#readme"
+}
